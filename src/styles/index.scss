@@ -1,3 +1,54 @@
+// defining variables
+$fontFamily: "Open Sans", sans-serif;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$primary-header-color: #ffffff;
+$subtext-color: #d3d3d3;
+$form-panel-bg-color: #f2f2f2;
+$form-blue: #348fbc;
+$form-disabled-color: #909090;
+$selected-option-color: #212121;
+
+//background gray and background image styles
 html {
   background: gray;
+  background-image: url("/src/styles/car-finder-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+//Global styles
+body {
+  font-family: $fontFamily;
+  color: $subtext-color;
+  background-color: $form-panel-bg-color;
+}
+
+header {
+  color: $primary-header-color;
+  font-weight: $font-weight-bold;
+}
+
+//button styles
+button {
+  background-color: $form-blue;
+  color: $primary-header-color;
+  border: none;
+  &:disabled {
+    background-color: $form-disabled-color;
+    cursor: not-allowed;
+  }
+  .form-panel {
+    background-color: $form-panel-bg-color;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  //option styles
+  .selected-option {
+    background-color: $selected-option-color;
+    color: $primary-header-color;
+    border: radius 4px;
+  }
 }
