@@ -24,6 +24,7 @@ body {
   font-family: $fontFamily;
   color: $subtext-color;
   background-color: $form-panel-bg-color;
+  background: none;
 }
 
 header {
@@ -50,5 +51,69 @@ button {
     background-color: $selected-option-color;
     color: $primary-header-color;
     border: radius 4px;
+  }
+}
+
+//form styles
+#form-container {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+#car-search-form {
+  background-color: $form-panel-bg-color;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $form-blue;
+    margin-bottom: 5px;
+  }
+
+  button {
+    grid-column: span 3;
+    justify-content: center;
+    background-color: gainsboro;
+    color: $form-blue;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $form-panel-bg-color;
+    }
+
+    &:disabled {
+      background-color: $form-disabled-color;
+      cursor: not-allowed;
+    }
   }
 }
